@@ -1,1 +1,1 @@
-declare const d3: typeof d3umd.d3;
+declare const d3: typeof umd_d3.d3;
