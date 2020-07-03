@@ -1,0 +1,20 @@
+{
+  "name": "d3-lnl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "serve": "browser-sync start --server --ignore **/*.ts --files ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/d3": "5.7.2",
+    "browser-sync": "2.26.7",
+    "typescript": "3.9.6"
+  }
+}
