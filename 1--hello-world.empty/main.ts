@@ -18,6 +18,6 @@
 //     .attr('type', 'checkbox');
 
 // d3.selectAll('#numbers li')
-//     .text(() => Math.random());
+//     .text(Math.random());
 
 export {};
