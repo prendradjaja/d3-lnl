@@ -38,6 +38,40 @@ svg.append('g')
   .call(d3.axisLeft(y))
   .attr('transform', `translate(${margin.left}, 0)`);
 
+const marginOverlay =
+  svg.append('g')
+    .attr('fill', 'orange')
+    .attr('opacity', 0.5);
+
+marginOverlay
+  .append('rect')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('width', width)
+    .attr('height', margin.top)
+
+marginOverlay
+  .append('rect')
+    .attr('x', 0)
+    .attr('y', margin.top)
+    .attr('width', margin.left)
+    .attr('height', height - margin.top - margin.bottom)
+
+marginOverlay
+  .append('rect')
+    .attr('x', width - margin.right)
+    .attr('y', margin.top)
+    .attr('width', margin.right)
+    .attr('height', height - margin.top - margin.bottom)
+
+marginOverlay
+  .append('rect')
+    .attr('x', 0)
+    .attr('y', height - margin.bottom)
+    .attr('width', width)
+    .attr('height', margin.bottom)
+
+
 for (let point of points) {
   svg.append('circle')
     .attr('r', 2)
