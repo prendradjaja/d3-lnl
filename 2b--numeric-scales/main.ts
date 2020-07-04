@@ -30,6 +30,13 @@ const yScale =
     .domain([0, 100])
     .range([height - margin.bottom, margin.top]);
 
+for (let point of points) {
+  svg.append('circle')
+    .attr('r', 2)
+    .attr('cx', xScale(point.x))
+    .attr('cy', yScale(point.y));
+}
+
 svg.append('g')
   .call(d3.axisBottom(xScale))
   .attr('transform', `translate(0, ${height - margin.bottom})`);
@@ -37,12 +44,5 @@ svg.append('g')
 svg.append('g')
   .call(d3.axisLeft(yScale))
   .attr('transform', `translate(${margin.left}, 0)`);
-
-for (let point of points) {
-  svg.append('circle')
-    .attr('r', 2)
-    .attr('cx', xScale(point.x))
-    .attr('cy', yScale(point.y));
-}
   
 export {};
