@@ -1,6 +1,5 @@
-const message: string = "From D3";
+const message: string = "Hello, D3!";
 d3.select('p')
-    .append('span')
     .text(message);
 
 d3.selectAll('#shopping-list li')
