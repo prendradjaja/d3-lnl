@@ -49,6 +49,13 @@ const data = [
   { state: 'MA', dogOwnershipPercent: 24 },
 ];
 
+// const colorScale =
+//   percent => `rgba(0, 0, 255, ${percent/100})`
+
+// const colorScale =
+//   d3.scaleSequential(d3.interpolateBlues)
+//     .domain([0, 50])
+
 const colorScale =
   d3.scaleSequential(d3.interpolateBlues)
     .domain([0, d3.max(data, d => d.dogOwnershipPercent)])
