@@ -28,7 +28,6 @@ function makeChart1() {
     .join('text')
       .attr('x', (d, i) => i * 17)
       .attr('y', 17)
-      .attr('dy', '0.35em')
       .text(d => d);
   
   document.body.appendChild(svg.node());
@@ -51,7 +50,6 @@ function makeChart2() {
       .join('text')
         .attr('x', (d, i) => i * 17)
         .attr('y', 17)
-        .attr('dy', '0.35em')
         .text((d) => d);
   }
 }
@@ -74,7 +72,6 @@ function makeChart3() {
       .join(
         enter => enter.append('text')
           .attr('y', 17)
-          .attr('dy', '0.35em')
           .text(d => d),
         update => update,
         exit => exit.remove()
@@ -103,7 +100,6 @@ function makeChart4() {
       .join(
         enter => enter.append('text')
           .attr('y', -7)
-          .attr('dy', '0.35em')
           .attr('x', (d, i) => i * 17)
           .text(d => d),
         update => update,
