@@ -1,6 +1,6 @@
-*.js
+# *.js
 !/d3.v5.js
-*.js.map
+# *.js.map
 /node_modules/
-/index.html
+# /index.html
 /NOTES
