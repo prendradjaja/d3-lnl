@@ -81,7 +81,7 @@ document.body.appendChild(svg.node())
 
 function showData(data: LetterData) {
   svg.selectAll("rect")
-      .data(data, (d: LetterDatum) => d.letter) // Need to type the key function! :(
+      .data(data, (d: LetterDatum) => d.letter)
       .join(
         enter =>
           enter.append("rect")
@@ -89,17 +89,13 @@ function showData(data: LetterData) {
               .attr("x", (d, i) => xScale(i))
               .attr("y", d => yScale(d.frequency))
               .attr("height", d => yScale(0) - yScale(d.frequency))
-              .attr("width", xScale.bandwidth())
-          ,
-        update =>
-          update
-      )
-              .transition()
-              .duration(500)
-              .attr("fill", d => colorScale(d.letterType))
-              .attr("x", (d, i) => xScale(i))
-              .attr("y", d => yScale(d.frequency))
-              .attr("height", d => yScale(0) - yScale(d.frequency))
+              .attr("width", xScale.bandwidth()))
+        .transition()
+        .duration(500)
+        .attr("fill", d => colorScale(d.letterType))
+        .attr("x", (d, i) => xScale(i))
+        .attr("y", d => yScale(d.frequency))
+        .attr("height", d => yScale(0) - yScale(d.frequency))
 }
 
 function showConsonants() {
